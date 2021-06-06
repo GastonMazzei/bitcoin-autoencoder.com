@@ -301,7 +301,7 @@ def between_callback():
 def index():
 	return render_template('index.html')
 def run_app():
-	app.run(debug=False)
+	app.run(debug=False, host='0.0.0.0')
 
 
 # Start consuming data by calling Binance's API
@@ -312,8 +312,7 @@ if not SIMULATION:
 # Wait until "LENGTH" samples are gathered; 10% extra time
 # to handle bugs
 if not SIMULATION:
-	pass
-#	time.sleep(int(PERIOD*LENGTH*1.1))
+	pass#time.sleep(int(PERIOD*LENGTH*1.1))
 
 # Start the website in another thread
 if not SIMULATION:

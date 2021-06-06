@@ -1,8 +1,9 @@
-from kafkaHelper import initProducer, produceRecord
+
 from config import config, params
 import json, requests, time, asyncio, threading, requests, os
 
 if False:
+	from kafkaHelper import initProducer, produceRecord
 	# real time data collector
 	async def async_getCryptoRealTimeData(producer, topic, crypto, time_inverval):
 		# Old url

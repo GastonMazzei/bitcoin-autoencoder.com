@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+  flask2-bitcoin:
+    image: webapp-flask
+    build:
+      context: .
+      dockerfile: Dockerfile-flask2-bitcoin
+    ports:
+      - "5001:5001"
+    volumes:
+      - "./app:/app"
+    environment:
+      - FLASK_DEBUG=1
+      - FLASK_ENV=development
+  nginx:
+    image: webapp-nginx
+    build:
+      context: .
+      dockerfile: Dockerfile-nginx
+    ports:
+      - "81:80"
+      - "443:443"
+    depends_on:
+      - flask2-bitcoin
+    command: tail -F anything

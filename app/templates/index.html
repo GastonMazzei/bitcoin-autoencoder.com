@@ -252,7 +252,7 @@ function displayerFunction(){
 		  document.getElementById('myChart'),
 		  config
 		  );
-		var MAXIMUM = 34600;
+		var MAXIMUM = 34550;
 		var MINIMUM = 34500;
 		function armarChart(dat){
 			if ((MAXIMUM < Math.max.apply(null, dat[1])) || (MINIMUM > Math.min.apply(null, dat[1]))){
@@ -433,71 +433,81 @@ function displayerFunction(){
 <div id="moreInfo" style="display: none">
 <section class="hero is-link "  style="opacity: 0.8;" >
  <div class="hero-body" >
-	<h4 class="subtitle is-3 has-text-black" style="text-align: center">
+	<h4 class="subtitle is-3" style="text-align: center">
 1) Reconstruct the Signal Using a Neural Network
 	</h4>
+
+<!--
 </div>
 </section>
 
 <section class="hero is-light">
- <div class="hero-body" >
+ <div class="hero-body" > -->
 
 	<h6 class="subtitle is-4 " >
 A convolutional autoencoder was trained over 8-point windows of the BTC-USDT timeseries and a qualitatively-deemed reasonable reconstruction was obtained for the specially simple case of a 2-dimensional latent space (see image below). By the way, the reconstructed signal is the one labeled as "Autoencoder" in this website's upper chart.  
 	</h6>
+
+<!--
 </div>
 </section>
 
 <section class="hero is-link "  style="opacity: 0.8;" >
- <div class="hero-body" >
+ <div class="hero-body" > -->
 
 <center>
-<img src="/home/m4zz31/Documents/z1_projects/final-crypto-app/images/desc3-small.png" width="1000px" style="border:7px solid #363636;" alt="alt text">
+<img src="https://raw.githubusercontent.com/GastonMazzei/bitcoin-autoencoder.com/main/static/desc3-small.png" width="1000px" style="border:7px solid #363636;" alt="alt text">
 </center>
 <br><br>
 
-	<h4 class="subtitle is-3  has-text-black" style="text-align: center">
+	<h4 class="subtitle is-3  " style="text-align: center">
 
 2) Propose an Hypothesis in the Latent Space
 	</h4>
+
+<!--
 </div>
 </section>
 
 <section class="hero is-light">
- <div class="hero-body" >
-	<h6 class="subtitle is-4 has-text-black">
+ <div class="hero-body" > -->
+	<h6 class="subtitle is-4 ">
 After visualizing the data representation in the latent space (see image below), a model is proposed of a 1-dimensional manifold that can be parametrized by a straight line with an O(100) slope. By referring to their distance to the manifold, events can be tagged as potentially anomalous. 
 	</h6>
+
+<!--
 </div>
 </section>
 <section class="hero is-link "  style="opacity: 0.8;" >
- <div class="hero-body" >
+ <div class="hero-body" > -->
 <center>                                                                             <!--1350-->
-<img src="/home/m4zz31/Documents/z1_projects/final-crypto-app/images/desc1-small.png" width="1000px" style="border:7px solid #363636;" alt="alt text">
+<img src="https://raw.githubusercontent.com/GastonMazzei/bitcoin-autoencoder.com/main/static/desc1-small.png" width="1000px" style="border:7px solid #363636;" alt="alt text">
 </center>
 
-	<h4 class="subtitle is-3  has-text-black" style="text-align: center">
+	<h4 class="subtitle is-3  " style="text-align: center">
 <br><br>
 3) Fit a Trading Strategy using Linear Programming
 	</h4>
 
 
-
+<!--
 </div>
 </section>
 
 <section class="hero is-light">
- <div class="hero-body" >
-	<h6 class="subtitle is-4 has-text-black">
-Interpreting the distance to the linear manifold exceeding a certain threshold as an anomaly associated with trend reversal allows for the fitting of a multi-threshold weighted trading strategy using linear programming. 
+ <div class="hero-body" >-->
+	<h6 class="subtitle is-4 ">
+Interpreting the distance to the linear manifold exceeding a certain threshold as an anomaly associated with trend reversal allows for the fitting of a multi-threshold weighted trading strategy using linear programming: the strategy might not be overfitted, i.e. it may be able to generalize in order to gain predictive power, as over the testing set the strategy outperformed the benchmark hypothesis ~60% of the times, where the benchmark hypothesis is the strategy of just being long. Disclaimer: the strategy does not consider transaction costs.
 	</h6>
+
+<!--
 </div>
 </section>
 <section class="hero is-link "  style="opacity: 0.8;" >
- <div class="hero-body" >
+ <div class="hero-body" > -->
 
 <center>
-<img src="/home/m4zz31/Documents/z1_projects/final-crypto-app/images/desc2-small.png" width="1000px" style="border:7px solid #363636;" alt="alt text">
+<img src="https://raw.githubusercontent.com/GastonMazzei/bitcoin-autoencoder.com/main/static/desc2-small.png" width="1000px" style="border:7px solid #363636;" alt="alt text">
 </center>
 
 </div>
